@@ -1,0 +1,16 @@
+<h1> Yo what up?</h1>
+
+
+<div id="<%= @episode_id %>" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> <%= @title %> </h5>
+    <h6 class="card-subtitle mb-2 text-muted"> Temporada: <%= @season %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Numero episodio: <%= @episode_number %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Fecha lanzamiento: <%= @air_date %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Serie: <%= @series %></h6>
+
+    <% @characters.each do |char|%>
+      <a href="#" class="card-link"> <%= char %> </a>
+      <% end %>
+  </div>
+</div>
