@@ -1,0 +1,31 @@
+<h1> This is the detail for character <%= @name %> </h1>
+
+
+<div id="<%= 'char-' + @char_id.to_s %>" class="card" style="width: 18rem;">
+<div class="embed-responsive embed-responsive-16by9">
+     <img alt="<%=@char.name%>" class="card-img-top embed-responsive-item" src="<%=@img%>" />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> <%= @name %> </h5>
+    <h6 class="card-subtitle mb-2 text-muted"> Occupation: <%= @occupation.join(', ') %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Status: <%= @status %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Nickname: <%= @nickname %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Portrayed: <%= @portrayed %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"> Category: <%= @category %></h6>
+    
+    <h6 class="card-subtitle mb-2 text-muted"> Breaking Bad seasons: </h6>
+    <% if @breaking_bad_app %>
+        <% @breaking_bad_app.each do |season|%>
+            <a href="/series?id=Breaking_Bad" class="card-link"> <%= season %> </a>
+        <% end %>
+        <% end %>
+    
+    <h6 class="card-subtitle mb-2 text-muted"> Better Call Saul seasons: </h6>
+    <% if @better_call_saul_app%>
+        <% @better_call_saul_app.each do |season|%>
+            <a href="/series?id=Better_Call_Saul" class="card-link"> <%= season %> </a>
+        <% end %>
+        <% end %>
+  </div>
+</div>
+

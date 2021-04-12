@@ -21,5 +21,22 @@ class SeriesController < ApplicationController
 
     end
 
+    def character
+        @requested_name = params[:name]
+        formatted_name = @requested_name.gsub(" ", "+")
+        @char = Character.new(formatted_name)
+        puts formatted_name
 
+        @char_id = @char.char_id
+        @name = @char.name
+        @occupation = @char.occupation
+        @img = @char.img
+        @status = @char.status
+        @nickname = @char.nickname
+        @breaking_bad_app = @char.breaking_bad_app
+        @better_call_saul_app = @char.better_call_saul_app    
+        @portrayed = @char.portrayed
+        @category = @char.category
+
+    end
 end

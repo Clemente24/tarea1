@@ -16,10 +16,10 @@ class Serie
 
         ep_size = @episodes.size()
         #puts @episodes
-        puts "Episodes size: " + ep_size.to_s
+        #puts "Episodes size: " + ep_size.to_s
         @n_seasons = @episodes[ep_size - 1]['season'].to_i
         @seasons = []
-        puts "Number of seasons: " + @n_seasons.to_s
+        #puts "Number of seasons: " + @n_seasons.to_s
         
         range1 = 1..@n_seasons
         range1.each do |s|
@@ -29,6 +29,6 @@ class Serie
         @episodes.each do |ep|
             @seasons[ep['season'].to_i - 1].append(ep)
         end
-        puts "Seasons: " + @seasons.to_s
+        #puts "Seasons: " + @seasons.to_s
     end
 end
