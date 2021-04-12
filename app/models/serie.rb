@@ -29,6 +29,6 @@ class Serie
         @episodes.each do |ep|
             @seasons[ep['season'].to_i - 1].append(ep)
         end
-
+        puts "Seasons: " + @seasons.to_s
     end
 end

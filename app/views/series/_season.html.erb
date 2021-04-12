@@ -1,8 +1,9 @@
+
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="temporada-<%=season[0]['season']%>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <%= 'Temporada ' + season[0]['season']%>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="temporada-<%=index%>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= 'Temporada ' + index %>
   </button>
-  <div class="dropdown-menu" aria-labelledby="temporada-<%=season[0]['season']%>">
+  <div class="dropdown-menu" aria-labelledby="temporada-<%=index%>">
     <% season.each do |episode| %>
         <a class="dropdown-item" href="<%= '/episodes/' + episode['episode_id'].to_s %>"> <%= episode['title'] %> </a>
         <% end %>

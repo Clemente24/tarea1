@@ -1,12 +1,9 @@
-<h1> This is the main thing </h1>
+<h1> This is the info for <%= @serie_elegida %> </h1>
 
-<div id='headers'>
-    <%= @serie_elegida %>
-</div>
 
 <div id="dropdown" role="tablist" aria-multiselectable="true">
-    <% @seasons.each do |season| %>
-    <%= render :partial => "season", locals: { season: season }%>
+    <% @seasons.each_with_index do |season, index| %>
+    <%= render :partial => "season", locals: { season: season, index: (index + 1).to_s}%>
     <% end %>
 </div>
 

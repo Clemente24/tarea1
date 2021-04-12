@@ -1,7 +1,7 @@
 class SeriesController < ApplicationController
     def index
         @serie_elegida = params[:id]
-        puts @serie_elegida
+        #puts @serie_elegida
         #initialize(serie_elegida)
         @serie = Serie.new(@serie_elegida)
         @episodios = @serie.episodes
